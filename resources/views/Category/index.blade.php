@@ -24,8 +24,8 @@
                             <td>{{$no++}} </td> <!-- Menampilkan ID produk -->
                             <td>{{$item->title}} </td> <!-- Menampilkan judul produk -->
                             <td>
-                                <a href=" " class="btn btn-warning">Edit</a>
-                                <form action=" " method="POST" class="d-inline">
+                                <a href="{{ route('category.edit', $item->id) }}" class="btn btn-warning">Edit</a>
+                                <form action="{{route('category.aksi_hapus',$item->id)}} " method="POST" class="d-inline">
                                     @csrf
                                     <button class="btn btn-danger" type="submit">Hapus</button>
                                 </form>
