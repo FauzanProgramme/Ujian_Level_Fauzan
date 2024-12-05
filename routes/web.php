@@ -16,9 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+    
+
+Route::get('/', [ProdukSayaController::class, 'index'])->name('product_saya');
 Route::get('/ProdukSaya', [ProdukSayaController::class, 'index'])->name('product_saya');
 
 Route::get('/category',[KategoriController::class,'index'])->name('category');
